@@ -1,0 +1,50 @@
+<h1>Sleep Record</h1>
+<div class="linear-chart-wrapper">
+  <div class="headings">
+    <ul class="headings-list">
+      <li class="heading">
+        Day
+      </li>
+      <li class="heading active" [ngClass]="{ 'active' : true }">
+        Week
+      </li>
+      <li class="heading">
+        Month
+      </li>
+    </ul>
+  </div>
+
+  <svg id="linear" width="1200" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
+    <g app-linear-chart></g>
+  </svg>
+</div>
+
+<div class="statistic">  <!-- For this one I would add a new component -->
+  <h3 class="period">Feb 12 - Feb 18, 2023</h3>
+  <div class="statistic-container">
+    <div class="statistic-item">
+      <label class="item-heading">{{ 'Average time' | titlecase}}</label>
+      <div class="item-time">7 h 30m</div>
+      <div class="action">
+        <button class="details-btn">Details</button>
+      </div>
+    </div>
+
+    <div class="statistic-item">
+      <label class="item-heading">{{ 'Sleep quality' | titlecase}}</label>
+      <div class="item-time">85/<span class="percentage">100</span></div>
+      <div class="action">
+        <button class="result-btn">Good</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pie-chart-wrapper">
+  <div class="pie-item">
+    <svg id="pie" width="1200" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
+      <g app-pie-chart></g>
+    </svg>
+  </div>
+</div>
+
