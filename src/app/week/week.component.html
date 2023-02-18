@@ -1,0 +1,54 @@
+<div class="linear-chart-wrapper">
+  <!-- <div class="headings">
+    <ul class="headings-list">
+      <li class="heading">
+        Day
+      </li>
+      <li class="heading active" [ngClass]="{ 'active' : true }">
+        Week
+      </li>
+      <li class="heading">
+        Month
+      </li>
+    </ul>
+  </div> -->
+
+  <svg id="linear" width="100%" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
+    <defs>
+      <linearGradient id="aboveAverage" gradientTransform="rotate(90)">
+        <stop offset="5%" stop-color="#fa06c5" />
+        <stop offset="95%" stop-color="#750392" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="belowAverage" gradientTransform="rotate(90)">
+        <stop offset="5%" stop-color="gold" />
+        <stop offset="95%" stop-color="red" />
+      </linearGradient>
+    </defs>
+
+    <text x="0" y="45" fill="grey" style="font-size: 1.5em">23:00</text>
+    <path stroke-width="2" stroke="#ffffffaa" d="M100 40 H1100"/>
+
+    <text x="0" y="530" fill="grey" style="font-size: 1.5em">07:00</text>
+    <path stroke-width="2" stroke="#ffffffaa" d="M100 520 H1100"/>
+
+    <text x="110" y="560" fill="white" style="font-size: 2em">S</text>
+    <text x="260" y="560" fill="white" style="font-size: 2em">M</text>
+    <text x="410" y="560" fill="white" style="font-size: 2em">T</text>
+    <text x="560" y="560" fill="white" style="font-size: 2em">W</text>
+    <text x="710" y="560" fill="white" style="font-size: 2em">T</text>
+    <text x="860" y="560" fill="white" style="font-size: 2em">F</text>
+    <text x="1010" y="560" fill="white" style="font-size: 2em">S</text>
+
+    <circle r="20" fill="url(#aboveAverage)" cx="25" cy="630"></circle>
+    <text x="60" y="640" fill="grey" style="font-size: 2em">Above average</text>
+
+    <circle r="20" fill="url(#belowAverage)" cx="385" cy="630"></circle>
+    <text x="420" y="640" fill="grey" style="font-size: 2em">Below average</text>
+
+
+    <g app-line [points]="pointsItem" *ngFor="let pointsItem of points"></g>
+  </svg>
+</div>

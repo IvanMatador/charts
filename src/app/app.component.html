@@ -2,22 +2,27 @@
 <div class="linear-chart-wrapper">
   <div class="headings">
     <ul class="headings-list">
-      <li class="heading">
+      <li class="heading" routerLink="/day" routerLinkActive="active">
         Day
       </li>
-      <li class="heading active" [ngClass]="{ 'active' : true }">
+      <li class="heading active"  routerLinkActive="active" routerLink="/week">
         Week
       </li>
-      <li class="heading">
+      <li class="heading" routerLink="/month"  routerLinkActive="active">
         Month
       </li>
     </ul>
   </div>
-
-  <svg id="linear" width="1200" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
+  <router-outlet></router-outlet>
+  <!-- <app-week></app-week>
+  <app-day></app-day>
+  <app-month></app-month> -->
+  <!-- <svg id="linear" width="1200" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
     <g app-linear-chart></g>
-  </svg>
+    <g app-line [points]="pointsItem" *ngFor="let pointsItem of points"></g>
+  </svg> -->
 </div>
+
 
 <div class="statistic">  <!-- For this one I would add a new component -->
   <h3 class="period">Feb 12 - Feb 18, 2023</h3>

@@ -39,7 +39,7 @@ svg#linear,svg#pie  {
 
 
 .statistic {
-  width: calc(100% - 60px);
+  width: 100%;
   padding: 20px;
 }
 
@@ -104,7 +104,6 @@ svg#linear,svg#pie  {
 }
 
 .pie-chart-wrapper {
-  width: calc(100% - 60px);
   display: flex;
   align-items: center;
   justify-content: space-between;

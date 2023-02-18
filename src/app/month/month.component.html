@@ -1,0 +1,40 @@
+<div class="linear-chart-wrapper">
+
+  <svg id="linear" width="100%" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
+    <defs>
+      <linearGradient id="rest" gradientTransform="rotate(90)">
+        <stop offset="5%" stop-color="#fa06c5" />
+        <stop offset="95%" stop-color="#750392" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="activity" gradientTransform="rotate(90)">
+        <stop offset="5%" stop-color="gold" />
+        <stop offset="95%" stop-color="red" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="sleep" gradientTransform="rotate(130)">
+        <stop offset="5%" stop-color="rgba(87, 139, 253, 0.993)" />
+        <stop offset="95%" stop-color="blue" />
+      </linearGradient>
+    </defs>
+
+    <path stroke-width="2" stroke="#ffffffaa" d="M70 40 H1200"/>
+
+    <path stroke-width="2" stroke="#ffffffaa" d="M70 520 H1200"/>
+
+    <text x="100" y="560" fill="white" style="font-size: 2em">Days of month</text>
+
+    <circle r="20" fill="url(#activity)" cx="25" cy="630"></circle>
+    <text x="60" y="640" fill="grey" style="font-size: 2em">Hight Activity</text>
+
+    <circle r="20" fill="url(#rest)" cx="385" cy="630"></circle>
+    <text x="420" y="640" fill="grey" style="font-size: 2em">Low Activity</text>
+
+
+    <g app-line [points]="pointsItem" *ngFor="let pointsItem of pointsMonth"></g>
+  </svg>
+</div>
