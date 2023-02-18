@@ -1,1 +1,104 @@
-<p>pie works!</p>
+<svg:defs>
+  <linearGradient id="activity" gradientTransform="rotate(110)">
+    <stop offset="5%" stop-color="gold" />
+    <stop offset="95%" stop-color="red" />
+  </linearGradient>
+</svg:defs>
+
+<svg:defs>
+  <radialGradient id="rest" gradientTransform="rotate(35)" >
+    <stop offset="5%" stop-color="#750392" />
+    <stop offset="95%" stop-color="#fa06c5" />
+  </radialGradient>
+</svg:defs>
+
+<svg:defs>
+  <linearGradient id="sleep" gradientTransform="rotate(130)">
+    <stop offset="5%" stop-color="rgba(87, 139, 253, 0.993)" />
+    <stop offset="95%" stop-color="blue" />
+  </linearGradient>
+</svg:defs>
+
+<!-- <svg:text x="30" y="0" fill="#ffffffaa" style="font-size: 2em" @fadeIn>Sleeping State</svg:text> -->
+<svg:circle
+    [attr.r]="points.r"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    stroke-dashoffset="00"
+    stroke-width="30"
+    stroke="#ffffff55"
+    [attr.cx]="points.cx" [attr.cy]="points.cy"/>
+
+<svg:circle
+    [attr.r]="points.r"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    [style.stroke-dashoffset]="strokeDashoffset"
+    stroke-width="30"
+    [attr.stroke]="stroke"
+    stroke-linecap="round"
+    [attr.transform]="transform"
+    [@turnUp]="{ value: 'state', params: { newOffset : strokeDashoffset }}"
+    [attr.cx]="points.cx" [attr.cy]="points.cy"/>
+
+<svg:text [attr.x]="points.cx - 80" [attr.y]="points.cy + 30" fill="#ffffff" style="font-size: 4em; font-weight: 900;" @fadeIn>{{ 100 - strokeDashoffset }}%</svg:text>
+
+
+<!-- <svg:circle
+    [attr.r]="80"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    stroke-dashoffset="00"
+    stroke-width="20"
+    stroke="#ffffff55"
+    cx="500" cy="120"/>
+
+<svg:circle
+    [attr.r]="80"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    stroke-dashoffset="50"
+    stroke-width="20"
+    stroke="url(#second)"
+    stroke-linecap="round"
+    transform="rotate(-90 500 120)"
+    @turnUp
+    cx="500" cy="120"/>
+
+<svg:text x="460" y="130" fill="#ffffff" style="font-size: 2em; font-weight: 900;" @fadeIn>50%</svg:text>
+
+<svg:circle
+    [attr.r]="80"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    stroke-dashoffset="00"
+    stroke-width="20"
+    stroke="#ffffff55"
+    cx="900" cy="120"/>
+
+<svg:circle
+    [attr.r]="80"
+    pathLength="100"
+    fill="transparent"
+    stroke-dasharray="100"
+    stroke-dashoffset="70"
+    stroke-width="20"
+    stroke="#ffffff55"
+    stroke="url(#therd)"
+    stroke-linecap="round"
+    transform="rotate(-90 900 120)"
+    @turnUp
+    cx="900" cy="120"/>
+
+<svg:text x="860" y="130" fill="#ffffff" style="font-size: 2em; font-weight: 900;" @fadeIn>30%</svg:text>
+
+<svg:text x="55" y="270" fill="#ffffff" style="font-size: 1.5em; font-weight: 500;">Awake</svg:text>
+<svg:text x="470" y="270" fill="#ffffff" style="font-size: 1.5em; font-weight: 500;">Light</svg:text>
+<svg:text x="870" y="270" fill="#ffffff" style="font-size: 1.5em; font-weight: 500;">Deep</svg:text>
+
+ -->

@@ -24,7 +24,7 @@ export let turnUp = (newStrokeDashoffset: number) => {
 
 export let fadeIn = trigger('fadeIn', [
   transition('void => *', [
-    style({ opacity: 0 }),
-    animate(1000, style({ opacity: 1 }))
+    style({ opacity: 0, scale: .5 }),
+    animate(1000, style({ opacity: 1, scale: 1 }))
   ])
 ])

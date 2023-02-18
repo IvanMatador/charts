@@ -54,7 +54,6 @@ export class LineComponent implements OnInit, OnChanges {
     const k = (points.y1/100) * points.offset;
     this.strokeDashoffset = points.offset;
     this.path = `M${points.x1} ${points.y1} C${points.x1} ${points.y1}, ${points.x2 + 1} ${points.y2 + k}, ${points.x2 + 1} ${points.y2 + k}`;
-    // points.sleepQuality === 'good' ? this.stroke = 'url(#aboveAverage)' : this.stroke = 'url(#belowAverage)';
     switch(points.sleepQuality) {
       case 'good':
         this.stroke = 'url(#aboveAverage)';

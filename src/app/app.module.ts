@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { LinearChartComponent } from './linear-chart/linear-chart.component';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { LineComponent } from './line/line.component';
 import { PieComponent } from './pie/pie.component';
 import { DayComponent } from './day/day.component';
@@ -15,8 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LinearChartComponent,
-    PieChartComponent,
+    // LinearChartComponent,
+    // PieChartComponent,
     LineComponent,
     PieComponent,
     DayComponent,

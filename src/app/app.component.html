@@ -48,7 +48,9 @@
 <div class="pie-chart-wrapper">
   <div class="pie-item">
     <svg id="pie" width="1200" data-proportion-h="0.8" viewBox="-50 -50 1200 700 " style="background-color: transparent">
-      <g app-pie-chart></g>
+      <!-- <g app-pie-chart></g> -->
+      <text x="0" y="0" fill="#ffffffaa" style="font-size: 3em">Sleeping State</text>
+      <g app-pie [points]="pointsItem" *ngFor="let pointsItem of points"></g>
     </svg>
   </div>
 </div>

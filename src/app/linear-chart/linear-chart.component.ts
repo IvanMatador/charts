@@ -8,7 +8,6 @@ let sunDashOffset: number = 30;
   templateUrl: './linear-chart.component.html',
   styleUrls: ['./linear-chart.component.scss'],
   animations: [
-    riseUp(sunDashOffset)
   ],
 })
 export class LinearChartComponent implements OnInit {
