@@ -23,7 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "https://ivanraznatovskyii.github.io/Angular-pure-charts/",
+            "baseHref": "/Angular-pure-charts/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -64,7 +64,7 @@
               "namedChunks": true
             },
             "github-pages": {
-              "baseHref": "https://ivanraznatovskyii.github.io/Angular-pure-charts/"
+              "baseHref": "/Angular-pure-charts/"
             }
           },
           "defaultConfiguration": "production"
