@@ -6,10 +6,10 @@ import { DayComponent } from './day/day.component';
 
 
 const routes: Routes = [
-  { path: '', component: WeekComponent },
+  { path: '', component: WeekComponent, pathMatch: 'full' },
   { path: 'day', component: DayComponent },
   { path: 'month', component: MonthComponent },
-  { path: '**', redirectTo: 'week', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
