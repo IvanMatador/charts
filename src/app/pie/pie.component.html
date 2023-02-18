@@ -44,7 +44,9 @@
     [attr.cx]="points.cx" [attr.cy]="points.cy"/>
 
 <svg:text [attr.x]="points.cx - 80" [attr.y]="points.cy + 30" fill="#ffffff" style="font-size: 4em; font-weight: 900;" @fadeIn>{{ 100 - strokeDashoffset }}%</svg:text>
-
+<svg:text [attr.x]="points.cx - 80" [attr.y]="points.cy + 250" fill="#ffffff" style="font-size: 3em; font-weight: 500;" *ngIf="points.sleepQuality === 'activity'">Awake</svg:text>
+<svg:text [attr.x]="points.cx - 80" [attr.y]="points.cy + 250" fill="#ffffff" style="font-size: 3em; font-weight: 500;" *ngIf="points.sleepQuality === 'rest'">Light</svg:text>
+<svg:text [attr.x]="points.cx - 80" [attr.y]="points.cy + 250" fill="#ffffff" style="font-size: 3em; font-weight: 500;" *ngIf="points.sleepQuality === 'sleep'">Deep</svg:text>
 
 <!-- <svg:circle
     [attr.r]="80"
