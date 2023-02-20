@@ -37,9 +37,7 @@ export class PieComponent implements OnInit, OnChanges {
   strokeDashoffset: number = 100;
 
   stroke: 'url(#rest)' | 'url(#activity)' | 'url(#sleep)' = 'url(#activity)';
-  // path: string = 'M50 500 C50 500, 51 0, 51 0';
   transform: string = 'rotate(-90 100 120)';
-  // dArray: string = '40 60';
 
   constructor() { }
 
@@ -53,9 +51,7 @@ export class PieComponent implements OnInit, OnChanges {
 
   getPoints(points: RoundPoints) {
     this.transform = `rotate(-90 ${points.cx} ${points.cy})`;
-    // const k = (points.y1/100) * points.offset;
     this.strokeDashoffset = 100 - points.offset;
-    // this.path = `M${points.x1} ${points.y1} C${points.x1} ${points.y1}, ${points.x2 + 1} ${points.y2 + k}, ${points.x2 + 1} ${points.y2 + k}`;
 
     switch(points.sleepQuality) {
       case 'rest':

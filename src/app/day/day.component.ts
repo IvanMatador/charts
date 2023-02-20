@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Points } from '../line/line.component';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-day',

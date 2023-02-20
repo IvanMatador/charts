@@ -6,18 +6,6 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   selector: 'app-week',
   templateUrl: './week.component.html',
   styleUrls: ['./week.component.scss'],
-  // animations: [
-  //   trigger('riseUp', [
-  //     state('void => *', style({ strokeDashoffset: '{{ newOffset }}' }), { params : {
-  //       newOffset: 0
-  //     }}),
-  //     transition('void => *', [
-  //       style({ opacity: 0, strokeDashoffset: 100 }),
-  //       animate(1000, style({ opacity: 1, strokeDashoffset: 50 })),
-  //       animate('0.6s ease-out')
-  //     ])
-  //   ])
-  // ]
 })
 export class WeekComponent implements OnInit {
 

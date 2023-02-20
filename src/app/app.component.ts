@@ -19,21 +19,10 @@ export class AppComponent implements OnInit {
     { cx: 950, cy: 230, r: 160, y2: 0, offset: 30, sleepQuality: 'sleep' },
   ]
 
-  // pointsArray: Points[] = [];
-  // testPoints1: RoundPoints = {
-  //   cx: 150,
-  //   cy: 230,
-  //   r: 80,
-  //   y2: 0,
-  //   offset: 20,
-  //   sleepQuality: 'rest'
-  // }
-
   constructor() {
 
   }
 
   ngOnInit(): void {
-    // this.tempPoints
   }
 }
